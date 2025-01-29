@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pharmacist Admin Server - Bluetooth Connect</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Pharmacist Admin Server</h1>
+  </header>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="lock.html">Controls</a>
+    <a href="contact.html">Contact</a>
+    <a href="bluetooth.html">Bluetooth Connect</a>
+  </nav>
+  <main>
+    <section id="bluetooth">
+      <h2>Bluetooth Device Connection</h2>
+      <p>Select a device below to attempt a connection:</p>
+      <ul id="device-list">
+        <li>Device 1 <button onclick="connectDevice('Device 1')">Connect</button></li>
+        <li>Device 2 <button onclick="connectDevice('Device 2')">Connect</button></li>
+        <li>Device 3 <button onclick="connectDevice('Device 3')">Connect</button></li>
+      </ul>
+      <p id="connection-status"></p>
+    </section>
+  </main>
+  <footer>
+    <p>Pharmacist Admin Server &copy; 2025</p>
+  </footer>
+
+  <script>
+    function connectDevice(deviceName) {
+      document.getElementById('connection-status').textContent = `Attempting to connect to ${deviceName}... (Feature coming soon)`;
+    }
+  </script>
+</body>
+</html>

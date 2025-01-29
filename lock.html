@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pharmacist Admin Server - Lock</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Pharmacist Admin Server</h1>
+  </header>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="lock.html">Controls</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <main>
+    <section id="lock">
+      <h2>Enter Passcode</h2>
+      <p>Please enter the 4-digit passcode to access the Controls page:</p>
+      <input type="password" id="passcode" maxlength="4" placeholder="Enter 4-digit code">
+      <button onclick="checkPasscode()">Submit</button>
+      <p id="error-message" style="color: red; margin-top: 1rem;"></p>
+    </section>
+  </main>
+  <footer>
+    <p>Pharmacist Admin Server &copy; 2025</p>
+  </footer>
+
+  <script>
+    const correctPasscode = "1234"; // The passcode to unlock the controls page
+
+    function checkPasscode() {
+      const input = document.getElementById('passcode').value;
+      const errorMessage = document.getElementById('error-message');
+
+      if (input === correctPasscode) {
+        window.location.href = "controls.html"; // Redirect to controls page
+      } else {
+        errorMessage.textContent = "Incorrect passcode. Please try again.";
+      }
+    }
+  </script>
+</body>
+</html>
+<a href="bluetooth.html">Bluetooth Connect</a>
